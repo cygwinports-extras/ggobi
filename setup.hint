@@ -1,0 +1,8 @@
+category: Gnome Math
+requires: cygwin glib2 gtk2-x11 libcairo2 libgraphviz4 libintl8 libltdl3 libxml2 pango
+sdesc: "High-dimensional data visualization program"
+ldesc: "GGobi is an open source visualization program for exploring
+high-dimensional data. It provides highly dynamic and interactive
+graphics such as tours, as well as familiar graphics such as the
+scatterplot, barchart and parallel coordinates plots. Plots are
+interactive and linked with brushing and identification."

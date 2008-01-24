@@ -1,0 +1,186 @@
+ggobi
+------------------------------------------
+GGobi is an open source visualization program for exploring 
+high-dimensional data. It provides highly dynamic and interactive 
+graphics such as tours, as well as familiar graphics such as the 
+scatterplot, barchart and parallel coordinates plots. Plots are 
+interactive and linked with brushing and identification.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  glib2-2.14.5-1
+  gtk2-x11-2.12.5-1
+  libcairo2-1.4.12-1
+  libgraphviz4-2.16.1-1
+  libintl8-0.15-1
+  libltdl3-1.5.23a-2
+  libxml2-2.6.30-1
+  pango-1.18.4-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
+  binutils-20060817-1
+  cygport-0.3.7-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.ggobi.org/
+
+Canonical download:
+  http://www.ggobi.org/downloads/
+
+-------------------------------------------
+
+Build instructions:
+  unpack ggobi-<pv>-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ggobi-<pv>-X.cygport all
+
+This will create:
+  /usr/src/ggobi-<pv>-X-src.tar.bz2
+  /usr/src/ggobi-<pv>-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/ggobi.sh
+  /etc/xdg/ggobi/ggobirc
+  /usr/bin/cygggobi-0.dll
+  /usr/bin/ggobi.exe
+  /usr/include/ggobi/GGStructSizes.c
+  /usr/include/ggobi/GGobiAPI.h
+  /usr/include/ggobi/GGobiApp.h
+  /usr/include/ggobi/GGobiEvents.h
+  /usr/include/ggobi/barchartDisplay.h
+  /usr/include/ggobi/brushing.h
+  /usr/include/ggobi/colorscheme.h
+  /usr/include/ggobi/config.h
+  /usr/include/ggobi/cpanel.h
+  /usr/include/ggobi/defines.h
+  /usr/include/ggobi/display.h
+  /usr/include/ggobi/display_tree.h
+  /usr/include/ggobi/externs.h
+  /usr/include/ggobi/fileio.h
+  /usr/include/ggobi/ggobi-data.h
+  /usr/include/ggobi/ggobi-intl.h
+  /usr/include/ggobi/ggobi-renderer-cairo.h
+  /usr/include/ggobi/ggobi-renderer-factory.h
+  /usr/include/ggobi/ggobi-renderer.h
+  /usr/include/ggobi/ggobi.h
+  /usr/include/ggobi/ggobiClass.h
+  /usr/include/ggobi/marshal.h
+  /usr/include/ggobi/noop-toggle.h
+  /usr/include/ggobi/parcoordsClass.h
+  /usr/include/ggobi/plugin.h
+  /usr/include/ggobi/print.h
+  /usr/include/ggobi/read_csv.h
+  /usr/include/ggobi/read_init.h
+  /usr/include/ggobi/read_xml.h
+  /usr/include/ggobi/scatmatClass.h
+  /usr/include/ggobi/scatterplotClass.h
+  /usr/include/ggobi/splash.h
+  /usr/include/ggobi/splot.h
+  /usr/include/ggobi/testEvents.h
+  /usr/include/ggobi/tour.h
+  /usr/include/ggobi/tour1d_pp.h
+  /usr/include/ggobi/tour2d_pp.h
+  /usr/include/ggobi/tour_pp.h
+  /usr/include/ggobi/tsPlot.h
+  /usr/include/ggobi/tsdisplay.h
+  /usr/include/ggobi/types.h
+  /usr/include/ggobi/vars.h
+  /usr/include/ggobi/varseldata.h
+  /usr/include/ggobi/vartable.h
+  /usr/include/ggobi/write_xml.h
+  /usr/include/ggobi/writedata.h
+  /usr/lib/ggobi/data/Shipman.csv
+  /usr/lib/ggobi/data/Shipman.xml
+  /usr/lib/ggobi/data/adhoc.xml
+  /usr/lib/ggobi/data/algal-bloom.xml
+  /usr/lib/ggobi/data/buckyball.xml
+  /usr/lib/ggobi/data/cube6.xml
+  /usr/lib/ggobi/data/eies.xml
+  /usr/lib/ggobi/data/flea.csv
+  /usr/lib/ggobi/data/flea.xml
+  /usr/lib/ggobi/data/laser.csv
+  /usr/lib/ggobi/data/laser.xml
+  /usr/lib/ggobi/data/morsecodes.xml
+  /usr/lib/ggobi/data/olive.csv
+  /usr/lib/ggobi/data/olive.xml
+  /usr/lib/ggobi/data/perm4.xml
+  /usr/lib/ggobi/data/perm5.xml
+  /usr/lib/ggobi/data/pigs.xml
+  /usr/lib/ggobi/data/places.csv
+  /usr/lib/ggobi/data/places.xml
+  /usr/lib/ggobi/data/prim7.xml
+  /usr/lib/ggobi/data/ratcns.csv
+  /usr/lib/ggobi/data/ratcns.xml
+  /usr/lib/ggobi/data/river.xml
+  /usr/lib/ggobi/data/roos.csv
+  /usr/lib/ggobi/data/roos.xml
+  /usr/lib/ggobi/data/sarsHK.xml
+  /usr/lib/ggobi/data/sat.csv
+  /usr/lib/ggobi/data/sat.xml
+  /usr/lib/ggobi/data/sleep.csv
+  /usr/lib/ggobi/data/sleep.xml
+  /usr/lib/ggobi/data/snetwork.xml
+  /usr/lib/ggobi/data/stdColorMap.xml
+  /usr/lib/ggobi/data/tao-nomiss.xml
+  /usr/lib/ggobi/data/tao.csv
+  /usr/lib/ggobi/data/tao.xml
+  /usr/lib/ggobi/data/tips.csv
+  /usr/lib/ggobi/data/tips.xml
+  /usr/lib/ggobi/data/tmin.csv
+  /usr/lib/ggobi/data/tmin.xml
+  /usr/lib/ggobi/data/tmin1.csv
+  /usr/lib/ggobi/data/tmin1.xml
+  /usr/lib/ggobi/data/tmin2.xml
+  /usr/lib/ggobi/data/tmin3.xml
+  /usr/lib/ggobi/data/tmin4.xml
+  /usr/lib/ggobi/plugins/DataViewer/plugin.dll
+  /usr/lib/ggobi/plugins/DataViewer/plugin.la
+  /usr/lib/ggobi/plugins/DescribeDisplay/plugin.dll
+  /usr/lib/ggobi/plugins/DescribeDisplay/plugin.la
+  /usr/lib/ggobi/plugins/GraphAction/plugin.dll
+  /usr/lib/ggobi/plugins/GraphAction/plugin.la
+  /usr/lib/ggobi/plugins/GraphLayout/plugin.dll
+  /usr/lib/ggobi/plugins/GraphLayout/plugin.la
+  /usr/lib/ggobi/plugins/VarCloud/plugin.dll
+  /usr/lib/ggobi/plugins/VarCloud/plugin.la
+  /usr/lib/ggobi/plugins/ggvis/plugin.dll
+  /usr/lib/ggobi/plugins/ggvis/plugin.la
+  /usr/lib/ggobi/share/colorschemes.xml
+  /usr/lib/libggobi.dll.a
+  /usr/lib/libggobi.la
+  /usr/lib/pkgconfig/ggobi.pc
+  /usr/share/applications/ggobi.desktop
+  /usr/share/doc/ggobi-2.1.7/ABOUT-NLS
+  /usr/share/doc/ggobi-2.1.7/AUTHORS
+  /usr/share/doc/ggobi-2.1.7/COPYING
+  /usr/share/doc/ggobi-2.1.7/ChangeLog
+  /usr/share/doc/ggobi-2.1.7/INSTALL
+  /usr/share/doc/ggobi-2.1.7/NEWS
+  /usr/share/doc/ggobi-2.1.7/README
+  /usr/share/pixmaps/ggobi.png
+
+------------------
+
+Port Notes:
+
+----- version <pv>-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
