@@ -7,28 +7,28 @@ scatterplot, barchart and parallel coordinates plots. Plots are
 interactive and linked with brushing and identification.
 
 Runtime requirements:
-  cygwin-1.5.25-7
-  glib2-2.14.5-1
-  gtk2-x11-2.12.5-1
-  libcairo2-1.4.12-1
-  libgraphviz4-2.16.1-1
+  cygwin-1.5.25-15
+  glib2-2.16.3-1
+  gtk2-x11-2.12.10-1
+  libcairo2-1.6.4-1
+  libgraphviz4-2.18-1
   libintl8-0.15-1
-  libltdl3-1.5.23a-2
-  libxml2-2.6.30-1
-  pango-1.18.4-1
+  libltdl7-2.2.2-2
+  libxml2-2.6.32-1
+  pango-1.20.3-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
   autoconf2.5-2.61-1
-  automake1.10-1.10-1
-  binutils-20060817-1
-  cygport-0.3.7-1
-  gawk-3.1.5-4
+  automake1.10-1.10.1-1
+  binutils-20080523-1
+  cygport-0.3.12-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  gnome-common-2.20.0-2
+  libtool-2.2.2-2
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical website:
@@ -40,15 +40,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack ggobi-<pv>-X-src.tar.bz2
+  unpack ggobi-2.1.7-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./ggobi-<pv>-X.cygport all
+  cygport ./ggobi-2.1.7-X.cygport all
 
 This will create:
-  /usr/src/ggobi-<pv>-X-src.tar.bz2
-  /usr/src/ggobi-<pv>-X.tar.bz2
+  /usr/src/ggobi-2.1.7-X-src.tar.bz2
+  /usr/src/ggobi-2.1.7-X.tar.bz2
 
 -------------------------------------------
 
@@ -178,7 +178,10 @@ Files included in the binary package:
 
 Port Notes:
 
------ version <pv>-1 -----
+----- version 2.1.7-2 -----
+Rebuilt for libtool-2.2.
+
+----- version 2.1.7-1 -----
 Initial release for Cygwin.
 
 
