@@ -7,29 +7,30 @@ scatterplot, barchart and parallel coordinates plots. Plots are
 interactive and linked with brushing and identification.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  glib2-2.16.3-1
-  gtk2-x11-2.12.10-1
-  libcairo2-1.6.4-1
-  libgraphviz4-2.18-1
-  libintl8-0.15-1
-  libltdl7-2.2.2-2
-  libxml2-2.6.32-1
-  pango-1.20.3-1
+  cygwin-1.7.7-1
+  libcairo2-1.8.10-2
+  libglib2.0_0-2.24.1-1
+  libgraph4-2.26.3-2
+  libgtk2.0_0-2.20.1-1
+  libgvc5-2.26.3-2
+  libintl8-0.17-11
+  libltdl7-2.2.7a-15
+  libpango1.0_0-1.28.1-2
+  libxml2-2.7.7-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
-  binutils-20080523-1
-  cygport-0.3.12-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gnome-common-2.20.0-2
-  libtool-2.2.2-2
-  make-3.81-1
-  pkg-config-0.23a-2
-  sed-4.1.5-2
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
+  binutils-2.20.51-2
+  cygport-0.10.0-1
+  gawk-3.1.7-1
+  gcc4-core-4.5.0-1
+  gnome-common-2.28.0-2
+  libtool-2.2.7a-15
+  make-3.81-2
+  pkg-config-0.23b-10
+  sed-4.2.1-1
 
 Canonical website:
   http://www.ggobi.org/
@@ -40,149 +41,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack ggobi-2.1.7-X-src.tar.bz2
+  unpack ggobi-2.1.8-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./ggobi-2.1.7-X.cygport all
+  cygport ./ggobi-2.1.8-X.cygport all
 
 This will create:
-  /usr/src/ggobi-2.1.7-X-src.tar.bz2
-  /usr/src/ggobi-2.1.7-X.tar.bz2
+  /usr/src/ggobi-2.1.8-X-src.tar.bz2
+  /usr/src/ggobi-2.1.8-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /etc/postinstall/ggobi.sh
-  /etc/xdg/ggobi/ggobirc
-  /usr/bin/cygggobi-0.dll
-  /usr/bin/ggobi.exe
-  /usr/include/ggobi/GGStructSizes.c
-  /usr/include/ggobi/GGobiAPI.h
-  /usr/include/ggobi/GGobiApp.h
-  /usr/include/ggobi/GGobiEvents.h
-  /usr/include/ggobi/barchartDisplay.h
-  /usr/include/ggobi/brushing.h
-  /usr/include/ggobi/colorscheme.h
-  /usr/include/ggobi/config.h
-  /usr/include/ggobi/cpanel.h
-  /usr/include/ggobi/defines.h
-  /usr/include/ggobi/display.h
-  /usr/include/ggobi/display_tree.h
-  /usr/include/ggobi/externs.h
-  /usr/include/ggobi/fileio.h
-  /usr/include/ggobi/ggobi-data.h
-  /usr/include/ggobi/ggobi-intl.h
-  /usr/include/ggobi/ggobi-renderer-cairo.h
-  /usr/include/ggobi/ggobi-renderer-factory.h
-  /usr/include/ggobi/ggobi-renderer.h
-  /usr/include/ggobi/ggobi.h
-  /usr/include/ggobi/ggobiClass.h
-  /usr/include/ggobi/marshal.h
-  /usr/include/ggobi/noop-toggle.h
-  /usr/include/ggobi/parcoordsClass.h
-  /usr/include/ggobi/plugin.h
-  /usr/include/ggobi/print.h
-  /usr/include/ggobi/read_csv.h
-  /usr/include/ggobi/read_init.h
-  /usr/include/ggobi/read_xml.h
-  /usr/include/ggobi/scatmatClass.h
-  /usr/include/ggobi/scatterplotClass.h
-  /usr/include/ggobi/splash.h
-  /usr/include/ggobi/splot.h
-  /usr/include/ggobi/testEvents.h
-  /usr/include/ggobi/tour.h
-  /usr/include/ggobi/tour1d_pp.h
-  /usr/include/ggobi/tour2d_pp.h
-  /usr/include/ggobi/tour_pp.h
-  /usr/include/ggobi/tsPlot.h
-  /usr/include/ggobi/tsdisplay.h
-  /usr/include/ggobi/types.h
-  /usr/include/ggobi/vars.h
-  /usr/include/ggobi/varseldata.h
-  /usr/include/ggobi/vartable.h
-  /usr/include/ggobi/write_xml.h
-  /usr/include/ggobi/writedata.h
-  /usr/lib/ggobi/data/Shipman.csv
-  /usr/lib/ggobi/data/Shipman.xml
-  /usr/lib/ggobi/data/adhoc.xml
-  /usr/lib/ggobi/data/algal-bloom.xml
-  /usr/lib/ggobi/data/buckyball.xml
-  /usr/lib/ggobi/data/cube6.xml
-  /usr/lib/ggobi/data/eies.xml
-  /usr/lib/ggobi/data/flea.csv
-  /usr/lib/ggobi/data/flea.xml
-  /usr/lib/ggobi/data/laser.csv
-  /usr/lib/ggobi/data/laser.xml
-  /usr/lib/ggobi/data/morsecodes.xml
-  /usr/lib/ggobi/data/olive.csv
-  /usr/lib/ggobi/data/olive.xml
-  /usr/lib/ggobi/data/perm4.xml
-  /usr/lib/ggobi/data/perm5.xml
-  /usr/lib/ggobi/data/pigs.xml
-  /usr/lib/ggobi/data/places.csv
-  /usr/lib/ggobi/data/places.xml
-  /usr/lib/ggobi/data/prim7.xml
-  /usr/lib/ggobi/data/ratcns.csv
-  /usr/lib/ggobi/data/ratcns.xml
-  /usr/lib/ggobi/data/river.xml
-  /usr/lib/ggobi/data/roos.csv
-  /usr/lib/ggobi/data/roos.xml
-  /usr/lib/ggobi/data/sarsHK.xml
-  /usr/lib/ggobi/data/sat.csv
-  /usr/lib/ggobi/data/sat.xml
-  /usr/lib/ggobi/data/sleep.csv
-  /usr/lib/ggobi/data/sleep.xml
-  /usr/lib/ggobi/data/snetwork.xml
-  /usr/lib/ggobi/data/stdColorMap.xml
-  /usr/lib/ggobi/data/tao-nomiss.xml
-  /usr/lib/ggobi/data/tao.csv
-  /usr/lib/ggobi/data/tao.xml
-  /usr/lib/ggobi/data/tips.csv
-  /usr/lib/ggobi/data/tips.xml
-  /usr/lib/ggobi/data/tmin.csv
-  /usr/lib/ggobi/data/tmin.xml
-  /usr/lib/ggobi/data/tmin1.csv
-  /usr/lib/ggobi/data/tmin1.xml
-  /usr/lib/ggobi/data/tmin2.xml
-  /usr/lib/ggobi/data/tmin3.xml
-  /usr/lib/ggobi/data/tmin4.xml
-  /usr/lib/ggobi/plugins/DataViewer/plugin.dll
-  /usr/lib/ggobi/plugins/DataViewer/plugin.la
-  /usr/lib/ggobi/plugins/DescribeDisplay/plugin.dll
-  /usr/lib/ggobi/plugins/DescribeDisplay/plugin.la
-  /usr/lib/ggobi/plugins/GraphAction/plugin.dll
-  /usr/lib/ggobi/plugins/GraphAction/plugin.la
-  /usr/lib/ggobi/plugins/GraphLayout/plugin.dll
-  /usr/lib/ggobi/plugins/GraphLayout/plugin.la
-  /usr/lib/ggobi/plugins/VarCloud/plugin.dll
-  /usr/lib/ggobi/plugins/VarCloud/plugin.la
-  /usr/lib/ggobi/plugins/ggvis/plugin.dll
-  /usr/lib/ggobi/plugins/ggvis/plugin.la
-  /usr/lib/ggobi/share/colorschemes.xml
-  /usr/lib/libggobi.dll.a
-  /usr/lib/libggobi.la
-  /usr/lib/pkgconfig/ggobi.pc
-  /usr/share/applications/ggobi.desktop
-  /usr/share/doc/ggobi-2.1.7/ABOUT-NLS
-  /usr/share/doc/ggobi-2.1.7/AUTHORS
-  /usr/share/doc/ggobi-2.1.7/COPYING
-  /usr/share/doc/ggobi-2.1.7/ChangeLog
-  /usr/share/doc/ggobi-2.1.7/INSTALL
-  /usr/share/doc/ggobi-2.1.7/NEWS
-  /usr/share/doc/ggobi-2.1.7/README
-  /usr/share/pixmaps/ggobi.png
-
-------------------
-
 Port Notes:
 
------ version 2.1.7-2 -----
-Rebuilt for libtool-2.2.
-
------ version 2.1.7-1 -----
-Initial release for Cygwin.
+----- version 2.1.8-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

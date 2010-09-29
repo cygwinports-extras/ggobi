@@ -1,0 +1,26 @@
+--- origsrc/ggobi-2.1.7/plugins/Makefile.plugin	2007-05-25 06:11:17.000000000 -0500
++++ src/ggobi-2.1.7/plugins/Makefile.plugin	2008-07-06 16:33:09.296875000 -0500
+@@ -6,7 +6,7 @@
+ plugin_LTLIBRARIES        = plugin.la
+ 
+ # Most plugins will only require GGobi and its dependencies (gtk, libxml2)
+-plugin_la_LDFLAGS  = @GGOBI_LIBS@ -module
++plugin_la_LDFLAGS  = @GGOBI_LIBS@ -module -avoid-version -no-undefined -export-dynamic
+ plugin_la_CFLAGS   = @GGOBI_CFLAGS@ @SRC_DEBUG@
+ 
+ # Every plugin has an XML description and some docs
+--- origsrc/ggobi-2.1.7/src/Makefile.am	2007-09-18 13:11:27.000000000 -0500
++++ src/ggobi-2.1.7/src/Makefile.am	2008-07-06 16:33:09.328125000 -0500
+@@ -1,10 +1,11 @@
++
+ lib_LTLIBRARIES     = libggobi.la
+ libggobi_la_GOBS = data.gob renderer.gob renderer-factory.gob renderer-cairo.gob
+ libggobi_la_GOBSOURCES = $(libggobi_la_GOBS:%.gob=ggobi-%.c)
+ libggobi_la_GOBHEADERS = $(libggobi_la_GOBS:%.gob=ggobi-%.h)
+ libggobi_la_GOBOBJECTS = $(libggobi_la_GOBS:%.gob=ggobi-%.lo)
+ libggobi_la_GOBSTAMPS = $(libggobi_la_GOBS:%.gob=.%.gob.stamp)
+-libggobi_la_LDFLAGS  = @GTK_LIBS@ @LIBXML_LIBS@
++libggobi_la_LDFLAGS  = @GTK_LIBS@ @LIBXML_LIBS@ -no-undefined
+ libggobi_la_BUILT = array.c ash1d.c barchart.c barchartClass.c \
+   barchart_ui.c brush.c brush_api.c brush_bins.c brush_init.c brush_link.c \
+   brush_ui.c color.c color_ui.c cpanel.c display.c display_tree.c display_ui.c \

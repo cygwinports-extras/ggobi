@@ -1,0 +1,34 @@
+--- origsrc/ggobi-2.1.7/Makefile.am	2007-05-25 06:12:16.000000000 -0500
++++ src/ggobi-2.1.7/Makefile.am	2008-07-06 16:33:09.093750000 -0500
+@@ -83,7 +83,7 @@
+ 
+ 	for i in $(PLUGIN_DIRS) ; do \
+ 	  echo "" >> $@ ; \
+-	  cat plugins/$$i/plugin.xml >> $@ ; \
++	  cat $(top_srcdir)/plugins/$$i/plugin.xml >> $@ ; \
+ 	done
+ 	echo "</plugins>" >> $@ 
+ 	echo "</ggobirc>" >> $@
+--- origsrc/ggobi-2.1.7/configure.ac	2007-09-28 08:23:44.000000000 -0500
++++ src/ggobi-2.1.7/configure.ac	2008-07-06 17:48:29.609375000 -0500
+@@ -42,7 +42,7 @@
+ AC_DEFINE_UNQUOTED([GGOBI_LOCALEDIR], "$GGOBI_LOCALEDIR", [Location of locale files])
+ 
+ # gettext needs MKINSTALLDIRS, but for some reason isn't getting it
+-MKINSTALLDIRS="\$(top_builddir)/$ac_aux_dir/mkinstalldirs"
++MKINSTALLDIRS="\$(top_srcdir)/config/mkinstalldirs"
+ AC_SUBST(MKINSTALLDIRS)
+ 
+ MAJOR_VERSION=ggobi_major_version
+--- origsrc/ggobi-2.1.8/ggobi.pc.in	2008-02-13 07:51:32.000000000 -0600
++++ src/ggobi-2.1.8/ggobi.pc.in	2010-09-29 00:06:05.919240600 -0500
+@@ -9,7 +9,7 @@ Name: libggobi
+ Version: @PACKAGE_VERSION@
+ Description: GGobi library for dynamic graphics.
+ Requires: gtk+-2.0, libxml-2.0
+-Libs: -L${libdir} -lggobi
+-Cflags: -I${includedir} -I${prefix}/libltdl
++Libs: @abs_top_builddir@/src/libggobi.la
++Cflags: -I${includedir} @INCLTDL@
+ 
+ Home: ${prefix}
