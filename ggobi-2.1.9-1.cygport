@@ -4,20 +4,11 @@ SRC_URI="http://www.ggobi.org/downloads/${P}.tar.bz2"
 
 PATCH_URI="
 	2.1.7-no-undefined.patch
-	2.1.7-system-libltdl.patch
 	2.1.7-vpath.patch
-	2.1.8-graphviz.patch
+	2.1.9-graphviz.patch
 "
 
-DIFF_EXCLUDES="libltdl"
-
-CYGCONF_ARGS="
-	--datadir=/usr/lib
-	--with-all-plugins
-	--without-included-ltdl
-	--with-ltdl-include=/usr/include
-	--with-ltdl-lib=/usr/lib
-"
+CYGCONF_ARGS="--datadir=/usr/lib --with-all-plugins"
 
 src_install() {
 	cd ${B}

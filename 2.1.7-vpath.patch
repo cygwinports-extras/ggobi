@@ -29,6 +29,6 @@
 -Libs: -L${libdir} -lggobi
 -Cflags: -I${includedir} -I${prefix}/libltdl
 +Libs: @abs_top_builddir@/src/libggobi.la
-+Cflags: -I${includedir} @INCLTDL@
++Cflags: -I${includedir}
  
  Home: ${prefix}

@@ -1,0 +1,18 @@
+graphviz.c:270:35: error: request for member 'x' in something not a structure or union
+graphviz.c:271:35: error: request for member 'y' in something not a structure or union
+
+http://code.google.com/p/ggobi-documentation/issues/detail?id=29
+
+--- origsrc/ggobi-2.1.9/plugins/GraphLayout/graphviz.c	2011-02-12 11:06:46.000000000 -0600
++++ src/ggobi-2.1.9/plugins/GraphLayout/graphviz.c	2011-11-13 21:29:57.461909900 -0600
+@@ -267,8 +267,8 @@ void dot_neato_layout_cb (GtkWidget *but
+       m = visible[i];
+       name = (gchar *) g_array_index (d->rowlab, gchar *, m);
+       node = agfindnode (graph, name);
+-      pos[i][0] = ND_coord_i(node).x;
+-      pos[i][1] = ND_coord_i(node).y;
++      pos[i][0] = ND_coord(node).x;
++      pos[i][1] = ND_coord(node).y;
+     }
+ 
+   } else if (layout_type == TWOPI_LAYOUT) {
