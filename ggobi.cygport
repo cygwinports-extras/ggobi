@@ -1,0 +1,33 @@
+NAME="ggobi"
+VERSION=2.1.9
+RELEASE=2
+CATEGORY="Math"
+SUMMARY="High-dimensional data visualization program"
+DESCRIPTION="GGobi is an open source visualization program for exploring high-
+dimensional data. It provides highly dynamic and interactive graphics such as
+tours, as well as familiar graphics such as the scatterplot, barchart and
+parallel coordinates plots. Plots are interactive and linked with brushing and
+identification."
+HOMEPAGE="http://www.ggobi.org/"
+SRC_URI="http://www.ggobi.org/downloads/${P}.tar.bz2"
+
+PATCH_URI="
+	2.1.7-no-undefined.patch
+	2.1.7-vpath.patch
+	2.1.9-graphviz.patch
+"
+
+CYGCONF_ARGS="--datadir=/usr/lib --with-all-plugins"
+
+src_install() {
+	cd ${B}
+	cyginstall \
+		desktopdir=/usr/share/applications \
+		iconsdir=/usr/share/pixmaps
+
+	cygmake ggobirc
+	insinto /etc/xdg/${PN}
+	doins ggobirc
+}
+
+KEEP_LA_FILES="none"
