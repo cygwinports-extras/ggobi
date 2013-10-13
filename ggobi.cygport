@@ -17,6 +17,10 @@ PATCH_URI="
 	2.1.9-graphviz.patch
 "
 
+PKG_NAMES="${NAME} ${NAME}-devel"
+ggobi_CONTENTS="etc/ usr/bin/ usr/lib/ggobi/ usr/share/"
+ggobi_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+
 CYGCONF_ARGS="--datadir=/usr/lib --with-all-plugins"
 
 src_install() {
