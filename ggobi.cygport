@@ -1,6 +1,6 @@
 NAME="ggobi"
 VERSION=2.1.9
-RELEASE=2
+RELEASE=3
 CATEGORY="Math"
 SUMMARY="High-dimensional data visualization program"
 DESCRIPTION="GGobi is an open source visualization program for exploring high-
@@ -21,7 +21,15 @@ PKG_NAMES="${NAME} ${NAME}-devel"
 ggobi_CONTENTS="etc/ usr/bin/ usr/lib/ggobi/ usr/share/"
 ggobi_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
 
-CYGCONF_ARGS="--datadir=/usr/lib --with-all-plugins"
+# graphlayout: incompatible with current graphviz (cgraph) API
+CYGCONF_ARGS="
+	--datadir=/usr/lib
+	--with-dataviewer
+	--with-describedisplay
+	--with-ggvis
+	--with-graphaction
+	--with-varcloud
+"
 
 src_install() {
 	cd ${B}
